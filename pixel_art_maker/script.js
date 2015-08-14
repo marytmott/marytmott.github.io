@@ -48,8 +48,8 @@
   function makeBlankPixels() {
 
     // 48 divs per row
-    // 28 rows
-    for(var i = 0; i < 1344; i++) {
+    // 31 rows
+    for(var i = 0; i < 1488; i++) {
       var blankDiv = document.createElement('div');
 
       blankDiv.style.margin = '1px';
