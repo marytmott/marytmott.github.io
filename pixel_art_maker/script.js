@@ -2,6 +2,7 @@
   var body = document.querySelector('body');
   var paintDivs;
   var blankDivs;
+  var blankCells;
   var currentColor;
   var mainDiv;
   var clearButton;
@@ -9,7 +10,7 @@
 
   function makeContainerDiv() {
     var containerDiv = document.createElement('div');
-    containerDiv.style.width = '960px';
+    containerDiv.style.width = '1050px';
     containerDiv.style.margin = '0 auto';
     body.appendChild(containerDiv);
   }
@@ -25,14 +26,15 @@
       '0, 0, 195', '127, 124, 255', '192, 191, 255', '255, 0, 255', '65, 0, 65',
       '129, 0, 130', '194, 0, 194', '255, 48, 255', '255, 123, 255', '255, 190, 255'];
 
-    // 51 divs per row
-    for(var i = 0; i < 51; i++) {
+      console.log(colors.length);
+    // 48 divs per row
+    for(var i = 0; i < 48; i++) {
       paintDiv = document.createElement('div');
       paintDiv.style.backgroundColor = 'rgb(' + colors[i] + ')';
       paintDiv.style.margin = '1px';
       paintDiv.style.border = '1px solid black';
-      paintDiv.style.width = '1.52%';
-      paintDiv.style.paddingBottom = '1.52%';
+      paintDiv.style.width = '1.70%';
+      paintDiv.style.paddingBottom = '1.70%';
       paintDiv.style.float = 'left';
       paintDiv.setAttribute('class', 'paintColor');
       paintDiv.addEventListener('click', function() {
@@ -45,35 +47,38 @@
 
   function makeBlankPixels() {
 
-    // 51 divs per row
-    // 30 rows
-    for(var i = 0; i < 1530; i++) {
+    // 48 divs per row
+    // 28 rows
+    for(var i = 0; i < 1344; i++) {
       blankDiv = document.createElement('div');
       blankDiv.style.margin = '1px';
       blankDiv.style.border = '1px solid black';
-      blankDiv.style.width = '1.52%';
-      blankDiv.style.paddingBottom = '1.52%';
+      blankDiv.style.width = '1.70%';
+      blankDiv.style.paddingBottom = '1.70%';
       blankDiv.style.float = 'left';
       blankDiv.setAttribute('class', 'blank');
+
+      //allows user to color cells one at a time
       blankDiv.addEventListener('click', function() {
-        // if (drag) {
-        //   drag = false;
-        // } else {
-        //   drag = true;
-
-        // }
-
-        // if (drag)
-        // drag = drag === true ? false : true;
-
         this.style.backgroundColor = currentColor;
-
-
       });
-      // blankDiv.addEventListener('mouseover', )
+
+      //next three functions allow user to drag colors over cells!
+      blankDiv.addEventListener('mousedown', function() {
+        // add ternary b/c if user mouseup off screen, it bugs out; so, clicking again will
+        // toggle drag to false and make it stop
+        drag = drag === false ? true : false;
+      });
+      blankDiv.addEventListener('mouseenter', function() {
+        if (drag) {
+          this.style.backgroundColor = currentColor;
+        }
+      });
+      blankDiv.addEventListener('mouseup', function() {
+        drag = false;
+        });
 
       mainDiv.appendChild(blankDiv);
-
     }
   }
 
@@ -98,13 +103,7 @@
   makePaintPixels();
   makeBlankPixels();
   addClearButton();
-
-console.log(drag);
-
-
-
-
-
+  blankCells = document.querySelectorAll('.blank');
 
 })();
 
