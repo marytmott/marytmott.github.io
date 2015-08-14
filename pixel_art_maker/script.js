@@ -26,7 +26,6 @@
       '0, 0, 195', '127, 124, 255', '192, 191, 255', '255, 0, 255', '65, 0, 65',
       '129, 0, 130', '194, 0, 194', '255, 48, 255', '255, 123, 255', '255, 190, 255'];
 
-      console.log(colors.length);
     // 48 divs per row
     for(var i = 0; i < 48; i++) {
       paintDiv = document.createElement('div');
