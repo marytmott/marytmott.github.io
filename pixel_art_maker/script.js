@@ -1,18 +1,18 @@
 (function() {
   var body = document.querySelector('body');
-  var paintDivs;
-  var blankDivs;
-  var blankCells;
   var currentColor;
   var mainDiv;
   var clearButton;
   var drag = false;
 
-  function makeContainerDiv() {
-    var containerDiv = document.createElement('div');
-    containerDiv.style.width = '1050px';
-    containerDiv.style.margin = '0 auto';
-    body.appendChild(containerDiv);
+  function makeContainerDiv(n) {
+    for (var i = 0; i < n; i++) {
+      var containerDiv = document.createElement('div');
+
+      containerDiv.style.width = '1050px';
+      containerDiv.style.margin = '0 auto';
+      body.appendChild(containerDiv);
+    }
   }
 
   function makePaintPixels() {
@@ -28,7 +28,8 @@
 
     // 48 divs per row
     for(var i = 0; i < 48; i++) {
-      paintDiv = document.createElement('div');
+      var paintDiv = document.createElement('div');
+
       paintDiv.style.backgroundColor = 'rgb(' + colors[i] + ')';
       paintDiv.style.margin = '1px';
       paintDiv.style.border = '1px solid black';
@@ -49,7 +50,8 @@
     // 48 divs per row
     // 28 rows
     for(var i = 0; i < 1344; i++) {
-      blankDiv = document.createElement('div');
+      var blankDiv = document.createElement('div');
+
       blankDiv.style.margin = '1px';
       blankDiv.style.border = '1px solid black';
       blankDiv.style.width = '1.70%';
@@ -68,7 +70,7 @@
         // toggle drag to false and make it stop
         drag = drag === false ? true : false;
       });
-      blankDiv.addEventListener('mouseenter', function() {
+      blankDiv.addEventListener('mouseenter', function(e) {
         if (drag) {
           this.style.backgroundColor = currentColor;
         }
@@ -94,15 +96,15 @@
       }
     });
 
-    mainDiv.appendChild(clearButton);
+    buttonDiv.appendChild(clearButton);
   }
 
-  makeContainerDiv();
-  mainDiv = document.querySelector('div');
+  makeContainerDiv(2);
+  mainDiv = document.querySelectorAll('div')[0];
+  buttonDiv = document.querySelectorAll('div')[1];
   makePaintPixels();
   makeBlankPixels();
   addClearButton();
-  blankCells = document.querySelectorAll('.blank');
 
 })();
 
