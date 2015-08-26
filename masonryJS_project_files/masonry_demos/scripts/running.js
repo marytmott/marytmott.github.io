@@ -21,8 +21,6 @@ $(function() {
     var $eTar = $(e.target);
 
     e.preventDefault();
-    // console.log($appendB);
-    // console.log($reldB);
 
     if ($eTar.is($appendB)) {
       if (!imgSrcs.length) {
@@ -37,7 +35,6 @@ $(function() {
       reloadImgs();
     }
 
-
   }
 
   function loadNext(e) {
@@ -45,7 +42,6 @@ $(function() {
 
       var imgSet = '<img src="images/trail_running/' + imgSrcs.splice(0, 1) + '" class="' + counter + '" />';
 
-      console.log(imgSet);
       $(imgSet).appendTo($main);
 
     }, 100);
