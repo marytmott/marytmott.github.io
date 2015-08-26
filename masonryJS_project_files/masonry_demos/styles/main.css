@@ -1,0 +1,98 @@
+/*blue grey color scheme + underwater kiss*/
+html,body,div,span,applet,object,iframe,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,label,legend,p,blockquote,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}body{line-height:1;color:black;background:white;}:focus{outline:0;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}ol,ul{list-style:none;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}blockquote:before,blockquote:after,q:before,q:after{content:"";}blockquote,q{quotes:"" "";}abbr,acronym{border:0;}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: rgb(75, 78, 80);
+  font-family: 'Merriweather Sans', sans-serif;
+  color: rgb(230, 241, 245);
+}
+
+header {
+  background-color: rgba(110, 116, 118, .5);
+}
+
+h1 {
+  text-align: center;
+  font-size: 80px;
+  color: rgb(191, 204, 245);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-shadow: 0px 0px 9px rgb(0, 0, 0);
+  margin: 0;
+}
+
+p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  text-shadow: 0px 0px 10px rgb(170, 179, 182);
+}
+
+.main {
+  width: 90%;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quote {
+  width: 250px;
+  float: left;
+  border: 2px solid rgb(191, 204, 245);
+  padding: 20px;
+  margin: 15px;
+  border-top-right-radius: 35px;
+  border-bottom-left-radius: 35px;
+}
+
+.modified {
+  color: rgb(194, 128, 128);
+  font-size: 90px;
+  text-shadow: none;
+  font-weight: bold;
+  font-style: italic;
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+img {
+  width: 300px;
+  float: left;
+  margin: 5px;
+  border: 3px solid rgb(163, 217, 217);
+  /*border-bottom-right-radius: 15px;*/
+}
+
+#manip-bar {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+
+}
+
+button {
+  /*display: block;*/
+  /*width: 60%;*/
+/*  margin-left: 0 auto;
+  margin-right: 0 auto;*/
+  width: 100%;
+  /*margin-top: 30px;*/
+  font-size: 1.2em;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: bold;
+  color: rgb(230, 241, 245);
+  padding: 10px;
+  border: 4px solid rgb(91, 95, 97);
+  border-radius: 25px;
+  background-color: rgb(117, 123, 140);
+
+}
+
+
