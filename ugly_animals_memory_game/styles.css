@@ -1,0 +1,128 @@
+html,body,div,span,applet,object,iframe,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,label,legend,p,blockquote,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}body{line-height:1;color:black;background:white;}:focus{outline:0;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}ol,ul{list-style:none;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}blockquote:before,blockquote:after,q:before,q:after{content:"";}blockquote,q{quotes:"" "";}abbr,acronym{border:0;}
+
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+/*  ========================================
+  Custom styles
+  ========================================*/
+
+  body{
+    background-image: url('images/forest.jpg');
+    margin: 0 0 0 0;
+    background-color: rgb(84, 181, 154);
+
+  }
+
+
+  div {
+    /* Put this on top of the blurred layer */
+    position: relative;
+    z-index: 100;
+    padding: 1px;
+    background: rgb(29, 36, 50); /* for IE */
+    background: rgba(29, 36, 50,0.75);
+  }
+
+  section {
+  	overflow: hidden; height: 993px;
+  }
+
+  img {
+    border: 2px solid black;
+  }
+
+  .main {
+    background-color:rgb(46, 62, 79);
+  }
+
+  .preload {
+    display: none;
+  }
+
+  .main {
+    width: 750px;
+    padding: 0 0 20px 0;
+    margin: 0 auto auto;
+    text-align: center;
+  }
+
+  .tiles {
+    width: 750px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+
+
+
+/*  ========================================
+  BUTTON
+  ========================================*/
+
+.button-newGame {
+    padding: 10px 15px;
+    background: rgb(73, 164, 133);
+    color: #FFF;
+    font-size: 20px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: solid 1px rgb(46, 62, 79);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+}
+.button-newGame:hover {
+    background: rgb(92, 195, 150);
+    border: solid 1px rgb(46, 62, 79);
+    text-decoration: none;
+}
+
+.button {
+  background: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 150px;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.button-newGame:active {
+    -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.8);
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.8);
+    background: rgb(92, 195, 140);
+    border: solid 1px 1px rgb(46, 62, 79);
+}
+
+
+/*  ========================================
+  Text
+  ========================================*/
+
+  h1{
+      text-align: center;
+      font-size: 100px;
+      font-family: 'Lucida Console';
+      color: rgb(73, 164, 133);
+      text-shadow: 3px 3px 0px rgb(228, 217, 147);
+  }
+  h3{
+      text-align: center;
+      font-family: 'Lucida Console';
+      color: rgb(73, 164, 133);
+      text-shadow: 2px 2px 0px rgb(170, 183, 184);
+
+  }
