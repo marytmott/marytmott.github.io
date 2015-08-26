@@ -68,7 +68,7 @@ $(function() {
       $main.hide().fadeIn(4000);
 
 
-    }, 4000);
+    }, 3000);
   }
 
 
