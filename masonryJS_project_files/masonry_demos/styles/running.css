@@ -27,6 +27,15 @@ div {
 }
 
 img {
-  width: 33%;
+  width: 20%;
   float: inline-block;
+}
+
+footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#reld-lyout {
+  display: none;
 }
