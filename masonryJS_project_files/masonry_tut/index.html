@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Masonry Tutorial</title>
+  <link href="masonry_tut.css" rel="stylesheet" type="text/css" />
+  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+  <script src="masonryTut.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Masonry Tutorial</h1>
+    <nav>
+      <ul>
+      links to diff sections on this page
+      </ul>
+    </nav>
+  </header>
+
+<div id="main">
+  <section>
+    <h2>What is Masonry?</h2>
+    <p>Masonry is a cascading grid layout library designed by David DeSandro. It was originally designed to work with jQuery, but there is also a "vanilla" version which works directly with JavaScript. This tutorial will specifically focus on its use with the jQuery library.</p>
+
+    <blockquote cite="http://masonry.desandro.com/">[Masonry] works by placing elements in optimal position based on available vertical space, sort of like a mason fitting stones in a wall.</blockquote>
+
+    <p>Masonry respositions a group of floated elements on your page to align them vertically based on their height, then horizontally. Traditional CSS floating aligns elements horizontally, then vertically. So, when you want to have a nice grid layout of floated elements with different heights, the rows will not be even. You can use Masonry to have the elements realigned.</p>
+  </section>
+
+  <div class="samples">
+    <div>
+      <h2>Before Masonry</h2>
+      <h3>Images of varying heights</h3>
+      <img src="images/m_before.png" class="high-img" />
+    </div>
+
+    <div>
+      <h2>After Masonry</h2>
+      <h3>Images are now aligned vertically</h3>
+      <img src="images/m_after.png" class="high-img" />
+    </div>
+
+    <h2>Masonry's Layout is Responsive</h2>
+    <p>Based on the width of the user's screen, Masonry will automatically reposition and relayout the elements in its grid.</p>
+
+    <ul>
+      <li>Three-column grid - displayed if screen >640px.</li>
+      <li>Two-column grid - displayed if screen <=640px and >320px.</li>
+      <li>One-column grid - displayed if screen is <=320px.</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2>Typical Usage of Masonry</h2>
+    <p>While of course creativity should always be paramount to only using Masonry if your website is of one of these types, here are the most popular types of websites which showcase elements with this library.</p>
+
+    <ul>
+      <li>Image galleries are the most popular use of Masonry.</li>
+      <li>Blog posts</li>
+      <li>Portfolio presentations</li>
+    </ul>
+
+    <h2>Links to Popular and Fancy Samples of Websites which Use Masonry</h2>
+    <p>Pinterest was the first major website to use this layout style.</p>
+    <div>
+      http://www.erikjohanssonphoto.com/work
+      Erik Johansson Photagrpahy (gorgeous!)
+      <img src="images/ejohansson_site.png" class="high-img" />
+    </div>
+    <div>
+      http://thereason.us/
+      Chris Arace, Image Maker
+      <img src="images/arace_site.png" class="high-img" />
+    </div>
+    <div>
+      https://www.tumblr.com/explore/trending
+      Tumblr
+      <img src="images/tumblr.png" class="high-img" />
+    </div>
+    <div>
+      http://veerle.duoh.com/inspiration
+      Veerle Pieters
+      <img src="images/pieters_site.png" class="high-img" />
+    </div>
+  </section>
+
+  <section>
+    <h2>Things to Consider If You Want to Use Masonry for Your Website</h2>
+
+    <ul>
+      <li>Masonry works best if there is a lot of material to display.</li>
+      <li>If you are going to use any other plugins or interactivity with the Masonry elements, you may have to play with Masonry a little more to get it to do what you want. (i.e. Image Loader, Google Fonts, Infinite Scroll, etc.)</li>
+      <li>Using an additional plugin to layout your Masonry grid (not discussed in this tutorial, but you can reference this section for links.)</li>
+      <li>Masonry is simple to use and has several</li>
+    </ul>
+
+    <h2>Why I like Masonry</h2>
+    <p>stuff</p>
+  </section>
+
+  <section>
+    <h2>Get Started with Masonry!</h2>
+    <p>Yea, Masonry looks pretty awesome and has some nice built-in-auto-activate-fancy-stuff and is pretty easy to set-up and get going! As I mentioned above, you may have to fidget with your code or Masonry settings depending on what else you're doing with the elements or your webpage.</p>
+
+    <h2>Get Masonry on Your Webpage</h2>
+    <ol>
+      <li>Get jQuery on your webpage first. Either use a CDN or download it yourself.
+        <li>Here's a link you can use: https://code.jquery.com/</li>
+      </li>Get Masonry source on your webpage. You can either
+      <li>Get Masonry source on your webpage. Again, you can either use a CDN or download it.
+        <li>Masonry code link here: https://github.com/desandro/masonry</li>
+      </li>
+    </ol>
+    <img src="images/script_src.png" class="code wide-img" />
+
+    <h2>Set Up Your Container Div and Grid in Your HTML</h2>
+    <p>Masonry is designed to work with a container element which has child elements. Often divs, images, or lists will be the content for the grid.</p>
+    <img src="images/div_img_sample.png" class="code short-img" />
+    <img src="images/div_div_sample.png" class="code short-img" />
+
+    <h2>Set Up the CSS for Your Grid Items</h2>
+    <p>At a minimum, you need to set a width and floats for your items.</p>
+
+    <h3>Tip!</h3>
+    <h4>Masonry will also work if you set the css display property to "inline-block" instead of using "float: left;"</h4>
+    <img src="images/img_css.png" class="code short-img" />
+    <img src="images/grid_css.png" class="code short-img" />
+
+    <h2>Call Masonry in Your Script</h2>
+    <p>To get Masonry doing just its basic job for your webpage, all you simply need to do is call it on your container div as shown below. Masonry does not require you to pass in anything to the function call. However, it is recommended, and I highly advise it too, that you specify the itemSelector option.</p>
+    <img src="images/m_call_grid.png" class="code short-img" />
+
+    <p>If you do not specify an itemSelector, Masonry will default to the child elements in the container. If you specify any options with the Masonry call, pass it in as an object. The properties are the Masonry options you wish to specify. Masonry options are touched on briefly below. Fullin detail on the Masonry website.</p> <!--need to add link-->
+
+    <h3>Tip!</h3>
+    <h4>I found that not setting a columnWidth option on the Masonry call and just using my CSS for margin and padding of the grid elements was the easiest way for my layout to look as I wanted.</h4>
+  </section>
+
+  <h1>Additional Libraries Needed With Some Masonry Designs</h1>
+  <section>
+    <h2>Using Masonry with Images</h2>
+    <p>We have an idea now of how fantastic Masonry can make an image gallery look. However, you are going to want to get an additional library called imageLoader to make Masonry fire after your images are loaded. It's pretty easy to add and requires just a few additiona lines of code!</p>
+
+    <ol>
+      <li>Get the imageLoader library on your webpage.
+        <li>Helpful link here: https://github.com/desandro/imagesloaded</li>
+      </li>
+      <li>Call imagesLoaded on your container div and pass in a function which calls Masonry.</li>
+    </ol>
+    <img src="images/m_call_imgs.png" class="code short-img" />
+
+    <h2>Using Masonry With Google Fonts</h2>
+
+
+    <p>
+
+
+  </section>
+
+
+
+
+options
+Methods
+
+using masonry with other plugins
+grid plugins
+
+masonry
+
+-margins vs. gutterwidth
+
+--using masonry append
+
+hwy i like masonry//comments
+--have to fudge around w/ it a lot
+- links to demos
+- links to other helpful masonry how to
+
+<!--put alts on images-->
+    </div><!-- main -->
+  </body>
+</html>
