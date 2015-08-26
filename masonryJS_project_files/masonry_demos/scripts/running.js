@@ -23,23 +23,14 @@ $(function() {
     e.preventDefault();
 
     if ($eTar.is($appendB)) {
-      if (!imgSrcs.length) {
-        $appendB.hide();
-        $('#reld-lyout').show();
-
-      } else {
-        $reldB.hide();
-        loadNext();
-      }
+      loadNext();
     } else {
       reloadImgs();
     }
-
   }
 
   function loadNext(e) {
     var appending = setInterval(function() {
-
       var imgSet = '<img src="images/trail_running/' + imgSrcs.splice(0, 1) + '" class="' + counter + '" />';
 
       $(imgSet).appendTo($main);
@@ -51,8 +42,16 @@ $(function() {
 
       clearInterval(appending);
       $newImgs = $('.' + counter);
-      $main.masonry('appended', $newImgs);
+
+      $main.imagesLoaded(function() {
+        $main.masonry('appended', $newImgs);
+      });
       counter++;
+
+      if (imgSrcs.length === 3) {  //on last iteration of appending
+        $appendB.hide();
+        $reldB.show();
+      }
 
     }, 350);
   }
@@ -60,8 +59,8 @@ $(function() {
   function reloadImgs() {
     var $imgs = $('img');
 
+    $reldB.hide();
     $imgs.css('width', "25%");
-
     $main.masonry({
       itemSelector: 'img'
     });
