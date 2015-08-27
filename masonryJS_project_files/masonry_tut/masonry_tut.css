@@ -55,6 +55,7 @@ a:hover {
 .samples div {
   width: 50%;
   float: left;
+  text-align: center;
 }
 
 .high-img {
