@@ -50,10 +50,7 @@ $(function() {
 
     for (var i = 0; i < srcs.length; i++) {
       var insert = '<img src="images/insp_quotes/' + srcs[i] + '"alt="' + i + '" />';
-
-
       $(insert).appendTo($main);
-
     }
 
     setTimeout(function() {
@@ -67,12 +64,8 @@ $(function() {
 
       $main.hide().fadeIn(4000);
 
-
     }, 3000);
   }
 
-
   $button.on('click', addImages)
-
-
 })

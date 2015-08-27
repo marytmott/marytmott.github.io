@@ -1,6 +1,5 @@
-$(function() {
+  $(function() {
   var $main = $('#main');
-  // var $button = $('button');
   var $footer = $('footer');
   var $appendB = $('#append-btn');
   var $reldB = $('#reld-lyout');
@@ -64,22 +63,16 @@ $(function() {
     $main.masonry({
       itemSelector: 'img'
     });
-
   }
 
 //=================//simplest to get masonry loaded
    $main.imagesLoaded(function() {
     $main.masonry({
       itemSelector: 'img'
-      // columnWidth: 'img',
-      // isAnimated: true
-
     });
   });
   //=================//
 
 
   $footer.on('click', 'button', checkForImgSrcs);
-
-
 })
