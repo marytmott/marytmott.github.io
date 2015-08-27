@@ -68,7 +68,6 @@ a:hover {
   border-radius: 10px;
   border: 2px solid rgb(196, 71, 65);
   margin: 20px;
-;
 }
 
 .short-img {
@@ -78,3 +77,27 @@ a:hover {
 .wide-img {
   width: 750px;
 }
+
+.tip-div {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 600px;
+  border: 4px solid rgb(82, 97, 109);
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.tip-h {
+  float: left;
+  width: 75px;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.tip-text {
+  float: left;
+  width: 465px;
+}
+
