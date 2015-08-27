@@ -2,9 +2,7 @@
 <html>
 <head>
   <title>Masonry Tutorial</title>
-  <link href="masonry_tut.css" rel="stylesheet" type="text/css" />
-  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
-  <script src="masonryTut.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>  <link href="masonry_tut.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
   <header>
@@ -26,7 +24,7 @@
     <p>Basically, Masonry respositions a group of floated elements on your page to align them vertically based on their height, then horizontally. Traditional CSS floating aligns elements horizontally, then vertically. So, when you want to have a nice grid layout of floated elements that have different heights, the rows will not be even. You can use Masonry to have the elements realigned.</p>
   </section>
 
-  <div class="samples">
+  <div class="clearfix samples">
     <div>
       <h3>Before Masonry</h3>
       <h4>Images of varying heights</h4>
@@ -48,7 +46,6 @@
       <li>Two-column grid - displayed if screen is <= 640px and > 320px.</li>
       <li>One-column grid - displayed if screen is <= 320px.</li>
     </ul>
-  </div>
 
   <section>
     <h2>Typical Website Usage of Masonry</h2>
@@ -62,7 +59,7 @@
 
     <h2>Links to Popular and Fancy Samples of Websites which Use Masonry</h2>
     <p><a href="https://www.pinterest.com/" target="_blank">Pinterest</a> was the first major website to use Masonry.</p>
-    <div class="samples">
+    <div class="clearfix samples">
       <div>
         <h3><a href="http://www.erikjohanssonphoto.com/work" target="_blank">Erik Johansson Photography</h3>
         <img src="images/ejohansson_site.png" class="high-img" /></a>
@@ -97,7 +94,7 @@
     <h1>Masonry Demos</h1>
     <p>Here are some demo websites I made which you can interact with to see how Masonry looks as well as get an idea of how it works.</p>
 
-    <div class="samples">
+    <div class="clearfix samples">
       <div>
         <h3><a href="http://marytmott.github.io/masonryJS_project_files/masonry_demos/" target="_blank">Masonry Demo of Text and Image Layout</h3>
         <img src="images/inspire_demo.png" class="high-img" /></a>
@@ -215,10 +212,10 @@ grid plugins
 
 -margins vs. gutterwidth
 
---using masonry append
+-using masonry append
 
 why i like masonry//comments
---have to fudge around w/ it a lot -->
+-have to fudge around w/ it a lot -->
 <!--put alts on images-->
     </div><!-- main -->
   </body>

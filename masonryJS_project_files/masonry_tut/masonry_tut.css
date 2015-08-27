@@ -7,7 +7,55 @@ html {
     box-sizing: inherit;
 }
 
-/*set image heights same */
+body {
+  background-color: rgb(44, 52, 59);
+  color: rgb(229, 225, 209);
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  text-align: center;
+}
+
+h1, h2 {
+  margin-top: 60px;
+}
+
+#main {
+  width: 960px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: rgb(196, 71, 65);
+}
+
+a:hover {
+  text-decoration: underline;
+  color: rgb(196, 71, 65);
+}
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+.samples div {
+  width: 50%;
+  float: left;
+}
 
 .high-img {
   height: 300px;
@@ -18,6 +66,9 @@ html {
 
 .code {
   border-radius: 10px;
+  border: 2px solid rgb(196, 71, 65);
+  margin: 20px;
+;
 }
 
 .short-img {
